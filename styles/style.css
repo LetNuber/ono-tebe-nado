@@ -1,4 +1,4 @@
-a {
+.address-link {
   color: black;
   font-style: normal;
 }
@@ -10,19 +10,21 @@ a {
   z-index: 0;
 }
 
-.font-1 {
-  font-family: Raleway;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24.3px;
-}
-
 .header__links-list-item {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-.header__links-list-item_no-style {
+.header__link_active {
+  text-decoration: none;
+  color: black;
+}
+
+.header__link {
+  color: black;
+}
+
+.header__links-list-item_no-bullit {
   list-style-type: none;
 }
 
@@ -42,6 +44,10 @@ a {
   display: flex;
   justify-content: space-evenly;
   list-style-type: circle;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24.3px;
 }
 
 .logo__image-black {
@@ -56,20 +62,19 @@ a {
   flex-wrap: wrap;
   align-content: center;
   padding-left: 125px;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24.3px;
 }
 
-.number {
-  text-underline-offset: 3px;
-}
-
-.mail {
+.address-link {
   text-underline-offset: 4px;
 }
 
 .cover {
   position: relative;
   background-image: url(../images/cover.jpg);
-  object-fit: cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -106,11 +111,11 @@ a {
   letter-spacing: 0;
 }
 
-.letter-spacing-extended-06em {
+.letter-spacing-extended {
   letter-spacing: 0.6em;
 }
 
-.letter-spacing-03em {
+.letter-spacing {
   letter-spacing: 0.3em;
 }
 
@@ -122,7 +127,7 @@ a {
   padding: 12px 32px;
   background-color: transparent;
   color: white;
-  border-color: white;
+  border: 1px solid #fff;
 }
 
 .cover__description {
@@ -156,7 +161,7 @@ a {
   font-family: Raleway;
   font-size: 40px;
   font-weight: 700;
-  line-height: 46.96px;
+  line-height: 43px;
   text-align: left;
 }
 
@@ -164,6 +169,7 @@ a {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 25px;
 }
 
@@ -178,7 +184,7 @@ a {
   flex-direction: column;
   background-size: cover;
   background-position: center;
-  height: 560px;
+  min-height: 565px;
   width: 334px;
   padding: 51px 40px 48px;
   z-index: -1;
@@ -275,6 +281,7 @@ a {
   padding-left: 25px;
   display: flex;
   flex-direction: column;
+  grid-column-start: 2;
   font-family: Raleway;
   font-size: 20px;
   font-weight: 400;
@@ -309,13 +316,24 @@ a {
   font-weight: 400;
   line-height: 21.13px;
   text-align: center;
+  padding-left: 34px;
 }
 
 .footer__menu-list {
   list-style: none;
 }
 
-.footer__social-list-item {
+.footer__menu-link_active {
+  text-decoration: none;
+  color: black;
+}
+
+.footer__menu-link {
+  text-underline-offset: 4px;
+  color: black;
+}
+
+.footer__social-list {
   display: flex;
   list-style-type: none;
   gap: 48px;
